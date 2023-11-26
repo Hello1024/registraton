@@ -67,7 +67,7 @@ while True:
 
     # --- Quiver plot arguments
 
-    nvec = 20  # Number of vectors to be displayed along each image dimension
+    nvec = 5  # Number of vectors to be displayed along each image dimension
     nl, nc = image0.shape
     step = max(nl//nvec, nc//nvec)
 
@@ -82,7 +82,7 @@ while True:
     if quiv:
         quiv.remove()
     quiv = ax2.quiver(x, y, u_, v_, color='r', units='dots',
-               angles='xy', scale_units='xy', lw=3)
+               angles='xy', scale_units='xy', lw=3, scale=1)
     ax2.set_title("Optical flow magnitude and vector field")
     ax2.set_axis_off()
     fig.tight_layout()
